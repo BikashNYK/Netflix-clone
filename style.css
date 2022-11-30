@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: Helvetica, Arial, sans-serif;
+    /* color: white; */
+}
+
+/* Header css */
+header {
+    /* background-color: gray; */
+    /* background-color: transparent; */
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: background-color 1000ms ease;
+}
+.black-baground{
+    background-color: rgb(20, 20, 20);
+    /* background-color: white; */
+}
+.container {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+    height: 68px;    
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-Container,
+.right-Container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-width: 100px;
+    cursor: pointer;
+}
+
+.main-nav {
+    margin-left: 30px;
+    display: flex;
+}
+
+.nav-item {
+    list-style: none;
+    /* display: none; */
+    margin: 0 20px;
+    color: #e5e5e5;
+    opacity: .83;
+}
+
+.nav-item:not(.active) {
+    cursor: pointer;
+}
+
+.nav-item.active {
+    color: white;
+    opacity: 1;
+    font-size: 500;
+    cursor: default;
+}
+
+.right-Container .svg {
+    color: white;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.right-Container img {
+    cursor: pointer;
+}
+
+.right-Container svg,
+.right-Container img {
+    width: 22px;
+    margin: 0 10px;
+
+}
+
+/* Movie section css */
+.movie-section {
+    margin: 41px 0;
+}
+
+.movie-sec-heading {
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 1.25;
+    font-weight: 700;
+    display: inline;
+
+}
+
+.explore {
+    /* font-size: 8px; */
+    color: #54b9c5;
+    display: none;
+    font-size: 12px;
+    cursor: pointer;
+    margin-left: 10px;
+
+}
+
+.movie-sec-heading:hover .explore {
+    display: inline-block;
+}
+
+.movie-row {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-wrap: nowrap;
+    /* overflow-x: auto; */
+    /* overflow-y: visible; */
+    margin: 30px 0;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+.movie-item {
+    width: 245px;
+    object-fit: contain;
+    margin-right: 6px;
+    border-radius: 4px;
+}
+
+.movie-item:hover {
+    transform: scale(1.5);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+
+/* Banner Section */
+.banner-section {
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 92vh;
+    position: relative;
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.dem-heading {
+    margin-top: 1.4em;
+    color: #fff;
+    font-size: 58px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    max-width: 60%;
+}
+
+.demo-title {
+    margin: 14px 0;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.demo {
+    font-size: 17px;
+    color: #fff;
+    line-height: 1.3;
+    margin: 30px 0;
+   max-width: 40%;
+}
+
+.action-buttons-cont {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.action-btn {
+    border: none;
+    background-color: white;
+    padding: 8px 23px;
+    margin-top: 15px;
+    margin-right: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.action-btn:last-child {
+    background-color: rgba(109, 109, 110, 0.7);
+    color: white;
+}
+
+.banner-bottom {
+    height: 120px;
+    background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, .61), #141414);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+/* Responsive CSS */
+@media (max-width:767px) {
+    .main-nav {
+    display: none;
+    }
+    .demo {
+     max-width: 100%;
+    }
+}
